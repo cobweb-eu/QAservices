@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "m24.cobweb.qaservices"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile files('libs/52n-wps-client-lib-3.3.0.jar')
+    compile files('libs/xmlbeans-2.3.0.jar')
+    compile files('libs/javax.servlet-3.0.jar')
+    compile files('libs/52n-wps-io-3.3.0.jar')
+    compile files('libs/52n-wps-server-3.3.0.jar')
+    compile files('libs/net.opengis.wfs-8.7.jar')
+    compile files('libs/net.opengis.ows-8.7.jar')
+    compile files('libs/net.opengis.fes-8.7.jar')
+    compile files('libs/52n-wps-io-geotools-3.3.0.jar')
+    compile files('libs/gt-xml-8.7.jar')
+    compile files('libs/52n-xml-ows-v110-1.1.0.jar')
+    compile files('libs/52n-wps-v100-1.1.0.jar')
+    compile files('libs/52n-xml-xlink-v110-1.0.0.jar')
+    compile files('libs/gt-main-8.7.jar')
+    compile files('libs/gt-xml-8.7.jar')
+    compile files('libs/gt-api-8.7.jar')
+    compile files('libs/52n-wps-io-impl-3.3.0.jar')
+}
